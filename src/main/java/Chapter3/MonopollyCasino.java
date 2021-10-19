@@ -12,19 +12,16 @@ public class MonopollyCasino  {
         v5 сердечко
         v6 топор
          */
-        int bet,enteredNumberD1=10,enteredNumberD2=10,enteredNumberD3=10,v1=1,v2=2,v3=3,v4=4,v5=5,v6=6,rand;
+        int bet,enteredNumberD1,enteredNumberD2,enteredNumberD3,v1=1,v2=2,v3=3,v4=4,v5=5,v6=6;
         Scanner input= new Scanner(System.in);
 
         System.out.print("Please enter your bet: ");
         bet=input.nextInt();
+        enteredNumberD1=1+(int)(Math.random()*6);
+        enteredNumberD2=1+(int)(Math.random()*6);
+        enteredNumberD3=1+(int)(Math.random()*6);
 
-        for (;(enteredNumberD1>6)||(enteredNumberD2>6)||(enteredNumberD3>6);){
-            enteredNumberD1=1+(int)(Math.random()*10);
-            enteredNumberD2=1+(int)(Math.random()*10);
-            enteredNumberD3=1+(int)(Math.random()*10);
-        }
-
-        if ((enteredNumberD1==v1)&&(enteredNumberD2==v1)&&(enteredNumberD3==v1)){//якщо всі бантики
+        if ((enteredNumberD1==1)&&(enteredNumberD2==1)&&(enteredNumberD3==1)){//якщо всі бантики
             System.out.println("You won " + bet*10);
         }
         else if((enteredNumberD1==v2)&&(enteredNumberD2==v2)&&(enteredNumberD3==v2)){//якщо всі дзвіночки
