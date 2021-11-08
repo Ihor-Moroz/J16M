@@ -9,10 +9,10 @@ public class TestWhile {
         number=input.nextInt();
         max=number;
 
-        while(number!=0){
+        do {
             number=input.nextInt();
             max=(number>max)?number:max;
-        }
+        }while(number!=0);
         System.out.println(max);
         System.out.println(number);
     }
